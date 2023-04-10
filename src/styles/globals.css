@@ -1,0 +1,90 @@
+.bg-image {
+    background-image: url('../images/landing-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    background-color: #1A1B1C;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    height: 6rem;
+}
+
+.header a {
+    color: #fff;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: transparent !important;
+    outline: 1.5px solid #fff;
+    outline-offset: -4px;
+}
+
+.logo {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    margin-left: 1rem;
+}
+
+.white-text {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff !important;
+}
+
+.landingPageTextArea {
+    max-width: 30%;
+    position: absolute;
+    top: 50%;
+    padding: 1rem;
+    transform: translateY(-50%);
+}
+
+.mainContent {
+    padding-top: 55px;
+}
+
+iframe {
+    width: 100%;
+    height: 100vh;
+}
+
+.contact-card {
+    height: 100vh !important;
+    background-color: #1A1B1C !important;
+    background: linear-gradient(to right, #0a0a0a, #1A1B1C);
+}
+
+.contact-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.common-background {
+    background-color: #F0EDEB !important;
+}
+
+.card {
+    border: none !important;
+}
+
+.call-to-action-btn {
+    background-color: #000;
+    width: 55%;
+    padding: 1rem !important;
+    color: #F0EDEB;
+}
