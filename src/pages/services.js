@@ -1,9 +1,12 @@
 import Layout from '../components/Layout'
+import MenuList from '../components/MenuList';
 
 export default function Services() {
 	return (
 		<Layout>
-			<h1>Storitve</h1>
+			<div class="container">
+				<MenuList />
+			</div>
 		</Layout>
 	)
 }
