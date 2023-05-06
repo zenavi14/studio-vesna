@@ -4,92 +4,137 @@ function MenuList() {
 
     const cards = [
         {
-            id: 1,
-            title: 'Card 1',
+            title: 'Nega rok in nohtov',
+            img: 'nail-polish.png',
             items: [
-                { id: 1, name: 'Item 1', price: 10 },
-                { id: 2, name: 'Item 2', price: 20 },
-                { id: 3, name: 'Item 3', price: 30 },
+                { name: 'Novi nohti', price: 45 },
+                { name: 'Geliranje', price: 39 },
+                { name: 'Permanentni lak', price: 28 },
+                { name: 'Odstranjevanje per. laka', price: 9 },
+                { name: 'Klasična manikura', price: 22 },
+                { name: 'Nohti dodatki', price: 5 }
             ],
         },
         {
-            id: 2,
-            title: 'Card 2',
+            title: 'Pedikura',
+            img: 'aromatherapy.png',
             items: [
-                { id: 4, name: 'Item 4', price: 40 },
-                { id: 5, name: 'Item 5', price: 50 },
-                { id: 6, name: 'Item 6', price: 60 },
+                { name: 'Osnovna pedikura', price: 32 },
+                { name: 'Pedikura + per. lak', price: 40 },
+                { name: 'Medicinska pedikura', price: 35 },
+                { name: 'Otiščanec', price: 5 },
+                { name: 'Kurje oko', price: 5 }
             ],
         },
         {
-            id: 3,
-            title: 'Card 3',
+            title: 'Obrvi in trepalnice',
+            img: 'make-up.png',
             items: [
-                { id: 7, name: 'Item 7', price: 70 },
-                { id: 8, name: 'Item 8', price: 80 },
-                { id: 9, name: 'Item 9', price: 90 },
+                { name: 'Oblikovanje in puljenje obrvi', price: 10 },
+                { name: 'Barvanje obrvi', price: 7 },
+                { name: 'Oblikovanje z nitko', price: 12 },
+                { name: 'Barvanje trepalnic', price: 10 },
+                { name: 'Trepalnice - nove', price: 79 },
+                { name: 'Trepalnice - refil', price: 45 }
             ],
         },
         {
-            id: 4,
-            title: 'Card 4',
+            title: 'Depilacija',
+            img: 'depilation.png',
             items: [
-                { id: 10, name: 'Item 10', price: 100 },
-                { id: 11, name: 'Item 11', price: 110 },
-                { id: 12, name: 'Item 12', price: 120 },
+                { name: 'Depilacija podnosnih dlačic', price: 7 },
+                { name: 'Depilacija bikini', price: 10 },
+                { name: 'Depilacija podpazduh', price: 10 },
+                { name: 'Depilacija rok', price: 18 },
+                { name: 'Depilacija rok do komolca', price: 12 },
+                { name: 'Depilacija nog', price: 24 },
+                { name: 'Depilacija nog do kolen', price: 16 },
+                { name: 'Brazilska depilacija', price: 25 },
             ],
         },
         {
-            id: 5,
-            title: 'Card 5',
+            title: 'Nega telesa',
+            img: 'slim-body.png',
             items: [
-                { id: 13, name: 'Item 13', price: 130 },
-                { id: 14, name: 'Item 14', price: 140 },
-                { id: 15, name: 'Item 15', price: 150 },
+                { name: 'Limfna drenaža', price: 16 },
+                { name: 'Limfna drenaža + anti. obloga', price: 20 },
+                { name: 'Limfna drenaža 10x', price: 120 },
+                { name: 'Limfna drenaža + anti. obloga 10x', price: 180 },
+                { name: 'Anticelulitni Vacuslim', price: 48 }
             ],
         },
         {
-            id: 6,
-            title: 'Card 6',
+            title: 'Masaža',
+            img: 'body-massage.png',
             items: [
-                { id: 16, name: 'Item 16', price: 160 },
-                { id: 17, name: 'Item 17', price: 170 },
-                { id: 18, name: 'Item 18', price: 180 },
+                { name: '30 minut', price: 33 },
+                { name: '60 minut', price: 46 }
             ],
         },
         {
-            id: 7,
-            title: 'Card 7',
+            title: 'Nega obraza',
+            img: 'woman.png',
             items: [
-                { id: 19, name: 'Item 19', price: 190 },
-                { id: 20, name: 'Item 20', price: 200 },
+                { name: 'Osvežilna nega obraza', price: 55 },
+                { name: 'Prestižna nega', price: 65 }
             ],
         },
+        {
+            title: 'Solarij',
+            img: 'tanning.png',
+            items: [
+                { name: '1min', price: 0.70 },
+                { name: '100min', price: 60 }
+            ],
+        }
     ];
 
     // Determine the maximum number of items across all cards
     const maxItemCount = Math.max(...cards.map((card) => card.items.length));
 
     // Set the min-height of each card to match the max number of items
-    const cardStyle = { minHeight: `${maxItemCount * 50}px` };
+    const cardStyle = { minHeight: `${maxItemCount * 68}px`, maxHeight: `${maxItemCount * 68}px` };
 
+    const headerStyle = {
+        background: 'linear-gradient(to right, #0a0a0a, #1A1B1C)',
+        color: '#fff'
+    };
 
+    const iconStyle = {
+        height: '84px',
+        width: '84px'
+    }
+
+    // const headerStyle = {
+    //     background: 'linear-gradient(45deg, #000, #fff)',
+    //     clipPath: 'polygon(50% 0%, 85% 25%, 85% 75%, 50% 100%, 15% 75%, 15% 25%)',
+    //     color: '#fff',
+    //     padding: '20px',
+    // };
+    
     return (
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-3 g-4 mt-1">
             {cards.map((card) => (
-                <div key={card.id} className="col">
+                <div key={card.title} className="col">
                     <Card style={cardStyle}>
-                        <Card.Header>{card.title}</Card.Header>
+                        <Card.Header style={headerStyle}>
+                            <h4>{card.title}</h4>
+                        </Card.Header>
                         <Card.Body>
                             <ListGroup variant="flush">
                                 {card.items.map((item) => (
-                                    <ListGroupItem key={item.id} className="d-flex justify-content-between align-items-center">
+                                    <ListGroupItem key={item.name} className="d-flex justify-content-between align-items-center">
                                         <span>{item.name}</span>
-                                        <span>${item.price}</span>
+                                        <span>{item.price} €</span>
                                     </ListGroupItem>
                                 ))}
                             </ListGroup>
                         </Card.Body>
+                        <Card.Footer>
+                            <div className="d-flex justify-content-center align-items-end">
+                                <img src={card.img} alt="Image" className="img-fluid" width="100" height="100" />
+                            </div>
+                        </Card.Footer>
                     </Card>
                 </div>
             ))}

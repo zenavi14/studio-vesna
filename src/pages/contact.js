@@ -4,7 +4,7 @@ import MapCard from '../components/MapCard'
 
 export default function Contact() {
 	return (
-		<Layout>
+		<Layout className="container">
 			<div className='row'>
 				<div className="col-sm-3">
 					<ContactCard />

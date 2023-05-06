@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="landingPageTextArea">
-        <h1>Dobrodošli</h1>
+        <h1 className="v-font" style={{ fontSize: '64px' }}>Dobrodošli</h1>
         <p>
           Smo salon z večletnimi izkušnjami na področju lepote in sprostitve.
           Prepustite se našim strokovnjakom in uživajte v vrhunskih storitvah.

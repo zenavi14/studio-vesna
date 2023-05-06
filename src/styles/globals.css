@@ -32,8 +32,7 @@
 
 .logo {
     color: #fff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: medium;
+    font-size: 30px;
     margin-left: 1rem;
 }
 
@@ -87,4 +86,18 @@ iframe {
     width: 55%;
     padding: 1rem !important;
     color: #F0EDEB;
+}
+
+.card-footer {
+    background-color: #fff !important;
+    color: none !important;
+    border-top: none !important;
+}
+
+body {
+    font-family: "Great Vibes", Helvetica, Arial, sans-serif !important;
+}
+
+.v-font {
+    font-family: "Italianno", Helvetica, Arial, sans-serif !important;
 }
