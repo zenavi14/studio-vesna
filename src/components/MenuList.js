@@ -1,5 +1,8 @@
 import { Card, ListGroup, ListGroupItem, Form } from 'react-bootstrap';
 import { React, useState } from 'react';
+import Dialog from './Dialog';
+
+import { AiOutlineCamera } from 'react-icons/ai';
 
 function MenuList() {
 
@@ -101,24 +104,24 @@ function MenuList() {
         color: '#fff'
     };
 
-    const iconStyle = {
-        height: '84px',
-        width: '84px'
-    }
+    // const iconStyle = {
+    //     height: '84px',
+    //     width: '84px'
+    // }
 
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSearch = (event) => {
-      setSearchTerm(event.target.value);
+        setSearchTerm(event.target.value);
     };
-  
+
     const filteredCards = cards.filter((card) => {
         const titleMatches = card.title.toLowerCase().includes(searchTerm.toLowerCase());
         const itemMatches = card.items.some(
-          (item) => item.name.toLowerCase().includes(searchTerm.toLowerCase())
+            (item) => item.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
         return titleMatches || itemMatches;
-      });
+    });
 
     // const headerStyle = {
     //     background: 'linear-gradient(45deg, #000, #fff)',
@@ -126,21 +129,24 @@ function MenuList() {
     //     color: '#fff',
     //     padding: '20px',
     // };
-    
+    const [showLogin, setShowLogin] = useState(false);
+
     return (
         <div className="row row-cols-1 row-cols-md-3 g-4">
             <Form.Control
                 type="text"
                 value={searchTerm}
                 onChange={handleSearch}
-                placeholder="Iskanje..."
+                placeholder="Iskanje"
                 className="search-input"
             />
             {filteredCards.map((card) => (
                 <div key={card.title} className="col">
                     <Card style={cardStyle}>
-                        <Card.Header style={headerStyle}>
+                        <Card.Header style={headerStyle} className="d-flex justify-content-between align-items-center">
                             <h4>{card.title}</h4>
+                            <AiOutlineCamera className="cursor-pointer" size={22} onClick={() => setShowLogin(true)} />
+                            <Dialog show={showLogin} close={() => setShowLogin(false)} />
                         </Card.Header>
                         <Card.Body>
                             <ListGroup variant="flush">
