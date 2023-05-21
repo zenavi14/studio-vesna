@@ -1,4 +1,5 @@
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem, Form } from 'react-bootstrap';
+import { React, useState } from 'react';
 
 function MenuList() {
 
@@ -105,6 +106,20 @@ function MenuList() {
         width: '84px'
     }
 
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleSearch = (event) => {
+      setSearchTerm(event.target.value);
+    };
+  
+    const filteredCards = cards.filter((card) => {
+        const titleMatches = card.title.toLowerCase().includes(searchTerm.toLowerCase());
+        const itemMatches = card.items.some(
+          (item) => item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        return titleMatches || itemMatches;
+      });
+
     // const headerStyle = {
     //     background: 'linear-gradient(45deg, #000, #fff)',
     //     clipPath: 'polygon(50% 0%, 85% 25%, 85% 75%, 50% 100%, 15% 75%, 15% 25%)',
@@ -114,7 +129,14 @@ function MenuList() {
     
     return (
         <div className="row row-cols-1 row-cols-md-3 g-4">
-            {cards.map((card) => (
+            <Form.Control
+                type="text"
+                value={searchTerm}
+                onChange={handleSearch}
+                placeholder="Iskanje..."
+                className="search-input"
+            />
+            {filteredCards.map((card) => (
                 <div key={card.title} className="col">
                     <Card style={cardStyle}>
                         <Card.Header style={headerStyle}>
@@ -132,7 +154,7 @@ function MenuList() {
                         </Card.Body>
                         <Card.Footer>
                             <div className="d-flex justify-content-center align-items-end">
-                                <img src={card.img} alt="Image" className="img-fluid" width="100" height="100" />
+                                <img src={card.img} alt="Image" className="img-fluid" width="64" height="64" />
                             </div>
                         </Card.Footer>
                     </Card>

@@ -101,3 +101,13 @@ body {
 .v-font {
     font-family: "Italianno", Helvetica, Arial, sans-serif !important;
 }
+
+.search-input {
+    width: 100% !important;
+    border: 1.5px solid #000 !important;
+}
+
+.search-input:focus {
+    border-color: #000 !important;
+    box-shadow: 0 0 0 0.1rem #1A1B1C !important;
+}
