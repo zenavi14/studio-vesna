@@ -111,3 +111,11 @@ body {
     border-color: #000 !important;
     box-shadow: 0 0 0 0.1rem #1A1B1C !important;
 }
+
+.header-right {
+    margin-right: 1rem !important;
+}
+
+ul {
+    list-style-type: none;
+}
